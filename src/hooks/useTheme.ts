@@ -21,9 +21,9 @@ export const getMapThemeFromCurrentTheme = (theme: Theme): string => {
  * @returns The current map theme style
  */
 export const useMapTheme = () => {
-  // Initialize map theme based on current settings, default to dark
+  // Initialize map theme based on current settings, follow system preference
   const [mapTheme, setMapTheme] = useState(() => {
-    if (typeof window === 'undefined') return MAP_TILE_STYLE_DARK;
+    if (typeof window === 'undefined') return MAP_TILE_STYLE_LIGHT;
 
     // Check for explicit theme in DOM
     const dataTheme = document.documentElement.getAttribute('data-theme');
@@ -35,8 +35,10 @@ export const useMapTheme = () => {
     if (savedTheme === 'dark') return MAP_TILE_STYLE_DARK;
     if (savedTheme === 'light') return MAP_TILE_STYLE_LIGHT;
 
-    // Default to dark theme
-    return MAP_TILE_STYLE_DARK;
+    // Follow system preference, default to light
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? MAP_TILE_STYLE_DARK
+      : MAP_TILE_STYLE_LIGHT;
   });
 
   /**
@@ -63,8 +65,10 @@ export const useMapTheme = () => {
     } else if (!dataTheme && savedTheme === 'light') {
       newTheme = MAP_TILE_STYLE_LIGHT;
     } else {
-      // Default to dark theme
-      newTheme = MAP_TILE_STYLE_DARK;
+      // Follow system preference, default to light
+      newTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? MAP_TILE_STYLE_DARK
+        : MAP_TILE_STYLE_LIGHT;
     }
 
     // Only update if theme has changed
@@ -122,17 +126,20 @@ export const useMapTheme = () => {
  * @returns Object with current theme and function to change theme
  */
 export const useTheme = () => {
-  // Initialize theme from localStorage or default to dark
+  // Initialize theme from localStorage, then system preference, then default to light
   const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'dark';
-    return (localStorage.getItem('theme') as Theme) || 'dark';
+    if (typeof window === 'undefined') return 'light';
+    const saved = localStorage.getItem('theme') as Theme | null;
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
 
   /**
-   * Set theme and dispatch event to notify other components
+   * Set theme explicitly (user action) — saves to localStorage
    */
   const setTheme = useCallback((newTheme: Theme) => {
     setThemeState(newTheme);
+    localStorage.setItem('theme', newTheme);
 
     // Dispatch custom event for theme change
     const event = new CustomEvent(THEME_CHANGE_EVENT, {
@@ -141,14 +148,22 @@ export const useTheme = () => {
     window.dispatchEvent(event);
   }, []);
 
-  // Apply theme changes to DOM and localStorage
+  // Apply theme to DOM only (localStorage is written only by setTheme)
   useEffect(() => {
-    const root = window.document.documentElement;
-
-    // Set attribute and save to localStorage for both themes
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    window.document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
+
+  // Listen for system theme changes when user hasn't explicitly set a preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        setThemeState(e.matches ? 'dark' : 'light');
+      }
+    };
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
+  }, []);
 
   return {
     theme,
