@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <name>gpx from keep</name>
+    <type>Run</type>
+    <trkseg>
+      <trkpt lat="38.837556585440524" lon="121.5045398003007">
+        <ele>8.627160546184612</ele>
+        <time>2025-11-20T08:33:24Z</time>
+      </trkpt>
+      <trkpt lat="38.8375700471673" lon="121.50441320957836">
+        <ele>8.481024727225304</ele>
+        <time>2025-11-20T08:33:32Z</time>
+      </trkpt>
+      <trkpt lat="38.83771679136391" lon="121.50436633867517">
+        <ele>8.092876189388335</ele>
+        <time>2025-11-20T08:33:39Z</time>
+      </trkpt>
+      <trkpt lat="38.8379415006747" lon="121.50423791862544">
+        <ele>7.937968664802611</ele>
+        <time>2025-11-20T08:33:48Z</time>
+      </trkpt>
+      <trkpt lat="38.83807601080346" lon="121.50421100018481">
+        <ele>9.075913130305707</ele>
+        <time>2025-11-20T08:33:54Z</time>
+      </trkpt>
+      <trkpt lat="38.838121862557536" lon="121.50430084057759">
+        <ele>9.699329130351543</ele>
+        <time>2025-11-20T08:33:57Z</time>
+      </trkpt>
+      <trkpt lat="38.83833248369364" lon="121.504021584957">
+        <ele>11.321162923889261</ele>
+        <time>2025-11-20T08:35:18Z</time>
+      </trkpt>
+      <trkpt lat="38.8382887650064" lon="121.50421867250357">
+        <ele>8.488774325275152</ele>
+        <time>2025-11-20T08:35:31Z</time>
+      </trkpt>
+      <trkpt lat="38.83838604633833" lon="121.50415379360065">
+        <ele>14.622968243585454</ele>
+        <time>2025-11-20T08:35:36Z</time>
+      </trkpt>
+      <trkpt lat="38.83838604633833" lon="121.50415379360065">
+        <ele>14.622968243585454</ele>
+        <time>2025-11-20T08:35:38Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

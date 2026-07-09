@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <trk>
+    <name>gpx from keep</name>
+    <type>Run</type>
+    <trkseg>
+      <trkpt lat="38.83769841220579" lon="121.505761014004">
+        <ele>10.865261781395755</ele>
+        <time>2026-02-09T00:18:21Z</time>
+      </trkpt>
+      <trkpt lat="38.83771626802392" lon="121.50584627722755">
+        <ele>10.874767209279717</ele>
+        <time>2026-02-09T00:18:24Z</time>
+      </trkpt>
+      <trkpt lat="38.837646230818066" lon="121.50583499799447">
+        <ele>10.42590910309395</ele>
+        <time>2026-02-09T00:18:27Z</time>
+      </trkpt>
+      <trkpt lat="38.837576644594954" lon="121.50586012301851">
+        <ele>10.844883989542723</ele>
+        <time>2026-02-09T00:18:33Z</time>
+      </trkpt>
+      <trkpt lat="38.83756512548037" lon="121.50592309056674">
+        <ele>11.123934700153768</ele>
+        <time>2026-02-09T00:18:39Z</time>
+      </trkpt>
+      <trkpt lat="38.837486222155256" lon="121.5060136445228">
+        <ele>12.400388839654624</ele>
+        <time>2026-02-09T00:18:54Z</time>
+      </trkpt>
+      <trkpt lat="38.83731037836077" lon="121.50635314052722">
+        <ele>11.725713131949306</ele>
+        <time>2026-02-09T00:19:36Z</time>
+      </trkpt>
+      <trkpt lat="38.83712390136188" lon="121.50667614428305">
+        <ele>12.355514917522669</ele>
+        <time>2026-02-09T00:20:15Z</time>
+      </trkpt>
+      <trkpt lat="38.837079477550766" lon="121.50679118405942">
+        <ele>12.59790913015604</ele>
+        <time>2026-02-09T00:20:31Z</time>
+      </trkpt>
+      <trkpt lat="38.83685997688361" lon="121.50708440913446">
+        <ele>11.45507610309869</ele>
+        <time>2026-02-09T00:21:14Z</time>
+      </trkpt>
+      <trkpt lat="38.83679259498817" lon="121.50719010028786">
+        <ele>9.418293440714478</ele>
+        <time>2026-02-09T00:21:26Z</time>
+      </trkpt>
+      <trkpt lat="38.83674606013769" lon="121.50721138825418">
+        <ele>8.909910422749817</ele>
+        <time>2026-02-09T00:21:32Z</time>
+      </trkpt>
+      <trkpt lat="38.836470838660375" lon="121.50703349795434">
+        <ele>10.134489943273365</ele>
+        <time>2026-02-09T00:22:02Z</time>
+      </trkpt>
+      <trkpt lat="38.83621704271419" lon="121.50682390530108">
+        <ele>8.768013657070696</ele>
+        <time>2026-02-09T00:22:32Z</time>
+      </trkpt>
+      <trkpt lat="38.836158877210586" lon="121.50677976064628">
+        <ele>9.115532469935715</ele>
+        <time>2026-02-09T00:22:40Z</time>
+      </trkpt>
+      <trkpt lat="38.83607572098651" lon="121.50696282465375">
+        <ele>8.22607157472521</ele>
+        <time>2026-02-09T00:24:13Z</time>
+      </trkpt>
+      <trkpt lat="38.83603620693022" lon="121.50701850576995">
+        <ele>9.933255628682673</ele>
+        <time>2026-02-09T00:24:19Z</time>
+      </trkpt>
+      <trkpt lat="38.83599993587709" lon="121.50715068162376">
+        <ele>8.629822932183743</ele>
+        <time>2026-02-09T00:24:31Z</time>
+      </trkpt>
+      <trkpt lat="38.835996495181455" lon="121.50723416104269">
+        <ele>8.687776888720691</ele>
+        <time>2026-02-09T00:24:37Z</time>
+      </trkpt>
+      <trkpt lat="38.835863492913" lon="121.50757798531276">
+        <ele>9.001490205526352</ele>
+        <time>2026-02-09T00:25:12Z</time>
+      </trkpt>
+      <trkpt lat="38.83582749479062" lon="121.50774388095645">
+        <ele>8.849086076021194</ele>
+        <time>2026-02-09T00:25:27Z</time>
+      </trkpt>
+      <trkpt lat="38.835782704849564" lon="121.50786817850205">
+        <ele>9.360622567124665</ele>
+        <time>2026-02-09T00:25:39Z</time>
+      </trkpt>
+      <trkpt lat="38.835782704849564" lon="121.50786817850205">
+        <ele>9.360622567124665</ele>
+        <time>2026-02-09T00:25:41Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
